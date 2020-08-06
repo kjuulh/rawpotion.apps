@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "services/identity": "git@github.com:kjuulh/rawpotion.identity.git",
+    "services/domain": "git@github.com:kjuulh/rawpotion.domain.git",
+    "services/client.home": "git@github.com:kjuulh/rawpotion.client.home.git",
+    "services/client": "git@github.com:kjuulh/rawpotion.client.git"
+  }
+}

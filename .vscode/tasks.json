@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "domain.build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/services/domain/Rawpotion.Domain/Rawpotion.Domain.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "identity.build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/services/identity/Rawpotion.Identity/Rawpotion.Identity.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "path": "services/client/",
+      "problemMatcher": ["$tsc"],
+      "label": "Rawpotion.Client | Dev",
+      "detail": "react-scripts start"
+    },
+    {
+      "type": "npm",
+      "script": "install",
+      "path": "services/client.home/",
+      "problemMatcher": ["$tsc"],
+      "label": "Rawpotion.Client.Home | Install",
+      "detail": "next install"
+    }
+    {
+      "type": "npm",
+      "script": "dev",
+      "path": "services/client.home/",
+      "problemMatcher": ["$tsc"],
+      "label": "Rawpotion.Client.Home | Dev",
+      "detail": "next dev"
+    }
+  ]
+}

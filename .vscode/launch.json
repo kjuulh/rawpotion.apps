@@ -1,0 +1,56 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rawpotion.Domain",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "domain.build",
+      "program": "${workspaceFolder}/services/domain/Rawpotion.Domain/bin/Debug/netcoreapp3.1/Rawpotion.Domain.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/services/domain/Rawpotion.Domain",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "Rawpotion.Identity",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "identity.build",
+      "program": "${workspaceFolder}/services/identity/Rawpotion.Identity/bin/Debug/netcoreapp3.1/Rawpotion.Identity.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/services/identity/Rawpotion.Identity",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Rawpotion.Client.Firefox",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/services/client"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Rawpotion.Client.Home.Firefox",
+      "url": "http://localhost:3001",
+      "webRoot": "${workspaceFolder}/services/client"
+    }
+  ]
+}
